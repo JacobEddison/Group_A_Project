@@ -24,10 +24,6 @@ function makeRequest() {
             newList.append(newEl);
             containerEl.appendChild(newList);
         }
-        for (let v of visits) {
-            console.log(v);
-        }
     }
-
 }
 makeRequest();
