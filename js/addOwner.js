@@ -1,3 +1,4 @@
+
 function makeRequest(formObject) {
     var xhr = new XMLHttpRequest();
     var json;
@@ -27,11 +28,5 @@ function addOwner(form) {
     console.log(JSON.stringify(formObject));
     debugger;
     makeRequest(formObject);
-        // .then(()=>{
-        //     console.log("it worked");
-        // })
-        // .catch((error)=>{
-        //     console.log("It failed"+error);
-        // })
     return false;
 }
