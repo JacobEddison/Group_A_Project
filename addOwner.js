@@ -25,7 +25,6 @@ function addOwner(form) {
     };
     console.log(formObject);
     console.log(JSON.stringify(formObject));
-    debugger;
     makeRequest(formObject);
         // .then(()=>{
         //     console.log("it worked");
