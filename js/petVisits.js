@@ -1,7 +1,7 @@
 function makeRequest() {
     var xhr = new XMLHttpRequest();
     var json;
-    var url = "http://localhost:9966/petclinic/api/visits";
+    var url = "http://localhost:9966/petclinic/api/pets";
     xhr.open("GET", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = () => {
@@ -15,15 +15,15 @@ function makeRequest() {
     xhr.send();
 
     function display() {
+        const newList = document.createElement("ol");
         for (let info of json) { // loop through the response
             const containerEl = document.getElementById("pets");
-            const newEl = document.createElement("h4");
-            const information = "Date: " + info.date + " Description: " + info.description;
-            console.log(information);
+            const newEl = document.createElement("li");
+            const information = info.name;
             newEl.innerHTML = information;
-            containerEl.append(newEl);
+            newList.append(newEl);
+            containerEl.appendChild(newList);
         }
     }
-
 }
 makeRequest();
